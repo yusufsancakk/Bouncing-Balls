@@ -58,16 +58,9 @@ public class SceneManager : MonoBehaviour {
 
         deviceinformationTextItemMesh = (TextMesh)deviceinformationTextItem.GetComponent(typeof(TextMesh)); //silinecek
 
-        if (UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPhone6SPlus)
-        {
+        
             deviceinformationTextItemMesh.text = "6sPLUS - Cihazın modeli: " + SystemInfo.deviceModel;
-        }
-        else
-        {
-            deviceinformationTextItemMesh.text = "Cihazın modeli: " + SystemInfo.deviceModel;
-
-        }
-
+    
 
     }
 

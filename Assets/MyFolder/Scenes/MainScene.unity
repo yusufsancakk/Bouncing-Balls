@@ -3421,7 +3421,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 471890749}
-  m_Text: "Cihaz\u0131n modeli: To be filled by O.E.M. (To be filled by O.E.M.)"
+  m_Text: 
   m_OffsetZ: 0
   m_CharacterSize: 0.01
   m_LineSpacing: 0.83
