@@ -41,6 +41,10 @@ public class SceneManager : MonoBehaviour {
     public Transform missionPanel;
     public AudioSource backgroundSound;
 
+    //silinecek
+    public Transform deviceinformationTextItem;
+    TextMesh deviceinformationTextItemMesh;
+    //silinecek
 
     public void Start()
     {
@@ -51,6 +55,18 @@ public class SceneManager : MonoBehaviour {
         gameFinishPanelCoinTextMesh = (TextMesh)gameFinishPanelCoinTextItem.GetComponent(typeof(TextMesh));
         gameFinishPanelADCoinTextMesh = (TextMesh)gameFinishPanelADCoinTextItem.GetComponent(typeof(TextMesh));
         mainPageCoinsTextMesh = (TextMesh)mainPageCoinsTextItem.GetComponent(typeof(TextMesh));
+
+        deviceinformationTextItemMesh = (TextMesh)deviceinformationTextItem.GetComponent(typeof(TextMesh)); //silinecek
+
+        if (UnityEngine.iOS.Device.generation == UnityEngine.iOS.DeviceGeneration.iPhone6SPlus)
+        {
+            deviceinformationTextItemMesh.text = "6sPLUS - Cihazın modeli: " + SystemInfo.deviceModel;
+        }
+        else
+        {
+            deviceinformationTextItemMesh.text = "Cihazın modeli: " + SystemInfo.deviceModel;
+
+        }
 
 
     }
