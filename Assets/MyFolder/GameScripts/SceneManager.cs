@@ -39,6 +39,8 @@ public class SceneManager : MonoBehaviour {
     public Transform MapNightObjects;
 
     public Transform missionPanel;
+    public AudioSource backgroundSound;
+
 
     public void Start()
     {
@@ -86,7 +88,7 @@ public class SceneManager : MonoBehaviour {
         OpactiyObject.gameObject.SetActive(true);
         GameFinishPage.gameObject.SetActive(true);
         GameisStarted = false;
-
+        backgroundSound.volume = 0.1f;
 
         if (mission)
         {
@@ -126,7 +128,7 @@ public class SceneManager : MonoBehaviour {
 
     public void GameStart()
     {
-        
+        backgroundSound.volume = 0.5f;
         GameisStarted = true;
         anyColorSkills.ButtonSkills();
         slowSkills.ButtonSkill();
