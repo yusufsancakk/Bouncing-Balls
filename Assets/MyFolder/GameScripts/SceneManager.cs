@@ -59,7 +59,7 @@ public class SceneManager : MonoBehaviour {
         deviceinformationTextItemMesh = (TextMesh)deviceinformationTextItem.GetComponent(typeof(TextMesh)); //silinecek
 
         
-            deviceinformationTextItemMesh.text = "6sPLUS - Cihazın modeli: " + SystemInfo.deviceModel;
+            deviceinformationTextItemMesh.text = "Cihazın modeli: " + SystemInfo.deviceModel;
     
 
     }
